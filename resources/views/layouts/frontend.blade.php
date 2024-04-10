@@ -122,6 +122,26 @@
                                             {{ trans('cruds.userAlert.title') }}
                                         </a>
                                     @endcan
+                                    @can('task_management_access')
+                                        <a class="dropdown-item disabled" href="#">
+                                            {{ trans('cruds.taskManagement.title') }}
+                                        </a>
+                                    @endcan
+                                    @can('task_status_access')
+                                        <a class="dropdown-item ml-3" href="{{ route('frontend.task-statuses.index') }}">
+                                            {{ trans('cruds.taskStatus.title') }}
+                                        </a>
+                                    @endcan
+                                    @can('task_tag_access')
+                                        <a class="dropdown-item ml-3" href="{{ route('frontend.task-tags.index') }}">
+                                            {{ trans('cruds.taskTag.title') }}
+                                        </a>
+                                    @endcan
+                                    @can('task_access')
+                                        <a class="dropdown-item ml-3" href="{{ route('frontend.tasks.index') }}">
+                                            {{ trans('cruds.task.title') }}
+                                        </a>
+                                    @endcan
 
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

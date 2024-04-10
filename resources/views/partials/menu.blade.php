@@ -334,6 +334,63 @@
                     </a>
                 </li>
             @endcan
+            @can('task_management_access')
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa-fw fas fa-list">
+
+                        </i>
+                        <span>{{ trans('cruds.taskManagement.title') }}</span>
+                        <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        @can('task_status_access')
+                            <li class="{{ request()->is("admin/task-statuses") || request()->is("admin/task-statuses/*") ? "active" : "" }}">
+                                <a href="{{ route("admin.task-statuses.index") }}">
+                                    <i class="fa-fw fas fa-server">
+
+                                    </i>
+                                    <span>{{ trans('cruds.taskStatus.title') }}</span>
+
+                                </a>
+                            </li>
+                        @endcan
+                        @can('task_tag_access')
+                            <li class="{{ request()->is("admin/task-tags") || request()->is("admin/task-tags/*") ? "active" : "" }}">
+                                <a href="{{ route("admin.task-tags.index") }}">
+                                    <i class="fa-fw fas fa-server">
+
+                                    </i>
+                                    <span>{{ trans('cruds.taskTag.title') }}</span>
+
+                                </a>
+                            </li>
+                        @endcan
+                        @can('task_access')
+                            <li class="{{ request()->is("admin/tasks") || request()->is("admin/tasks/*") ? "active" : "" }}">
+                                <a href="{{ route("admin.tasks.index") }}">
+                                    <i class="fa-fw fas fa-briefcase">
+
+                                    </i>
+                                    <span>{{ trans('cruds.task.title') }}</span>
+
+                                </a>
+                            </li>
+                        @endcan
+                        @can('tasks_calendar_access')
+                            <li class="{{ request()->is("admin/tasks-calendars") || request()->is("admin/tasks-calendars/*") ? "active" : "" }}">
+                                <a href="{{ route("admin.tasks-calendars.index") }}">
+                                    <i class="fa-fw fas fa-calendar">
+
+                                    </i>
+                                    <span>{{ trans('cruds.tasksCalendar.title') }}</span>
+
+                                </a>
+                            </li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcan
             @php($unread = \App\Models\QaTopic::unreadCount())
                 <li class="{{ request()->is("admin/messenger") || request()->is("admin/messenger/*") ? "active" : "" }}">
                     <a href="{{ route("admin.messenger.index") }}">

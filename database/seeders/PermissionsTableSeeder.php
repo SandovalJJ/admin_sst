@@ -528,6 +528,74 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 130,
+                'title' => 'task_management_access',
+            ],
+            [
+                'id'    => 131,
+                'title' => 'task_status_create',
+            ],
+            [
+                'id'    => 132,
+                'title' => 'task_status_edit',
+            ],
+            [
+                'id'    => 133,
+                'title' => 'task_status_show',
+            ],
+            [
+                'id'    => 134,
+                'title' => 'task_status_delete',
+            ],
+            [
+                'id'    => 135,
+                'title' => 'task_status_access',
+            ],
+            [
+                'id'    => 136,
+                'title' => 'task_tag_create',
+            ],
+            [
+                'id'    => 137,
+                'title' => 'task_tag_edit',
+            ],
+            [
+                'id'    => 138,
+                'title' => 'task_tag_show',
+            ],
+            [
+                'id'    => 139,
+                'title' => 'task_tag_delete',
+            ],
+            [
+                'id'    => 140,
+                'title' => 'task_tag_access',
+            ],
+            [
+                'id'    => 141,
+                'title' => 'task_create',
+            ],
+            [
+                'id'    => 142,
+                'title' => 'task_edit',
+            ],
+            [
+                'id'    => 143,
+                'title' => 'task_show',
+            ],
+            [
+                'id'    => 144,
+                'title' => 'task_delete',
+            ],
+            [
+                'id'    => 145,
+                'title' => 'task_access',
+            ],
+            [
+                'id'    => 146,
+                'title' => 'tasks_calendar_access',
+            ],
+            [
+                'id'    => 147,
                 'title' => 'profile_password_edit',
             ],
         ];
